@@ -5,34 +5,149 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vivi Castrillon</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="/img/ViCa.png">
+    <title>ViCa Portfolio</title>
+    <link rel="icon" type="image/png" href="./img/ViCa.png">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <header>    
-        <img src="./img/ViCa.png" alt="ViCa logo" class="logo">
-        <nav class="desktop-nav" aria-label="Primary">
+    <header>
+        <div class="mobile-header">
+            <img src="./img/ViCa.png" alt="ViCa Logo" class="logo">
+            <button type="button" class="menumobile-button" aria-label="Open navigation menu">
+                <img src="./img/menumobile.svg" alt="Menu mobile icon">
+            </button>
+        </div>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
             <ul>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Teams</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <nav class="mobile-nav display-none" aria-label="Primary navigation">
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="container">
-        <img src="./img/Vivi.jpeg" alt="Viviana Castrillon Olave">
-        <h1>Viviana Castrillon</h1>
-        <h2>Junior Web Developer | Founder | Digital Communications Specialist | Marketing Consultant</h2>
-    </div>
-    <section class="about">
-        <h2>About Me</h2>
-        <p>I’m Viviana Castrillon, a Junior Web Developer with a strong background in digital communications,
-            marketing, and project management. I’m passionate about creating meaningful digital solutions and
-            empowering professionals to thrive in a diverse and flexible work environment.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="card">
+            <!-- Left side: Video -->
+            <div class="card-left">
+                <video autoplay muted playsinline>
+                    <source src="./img/vivi profile.mp4.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+
+            <!-- Right side: Info -->
+            <div class="card-right">
+                <h1>Viviana Castrillon</h1>
+                <h3>Founder | Marketing Specialist | Jr Web Developer</h3>
+                <p>E-mail: <a href="mailto:hola@vivicastrillon.com.au">hola@vivicastrillon.com.au</a></p>
+
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/vivianacastrillonolave/">
+                        <img src="img/LinkedIn.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.instagram.com/vica_marketing/">
+                        <img src="img/Instagram.png" alt="Instagram">
+                    </a>
+                    <a href="https://github.com/teamedau">
+                        <img src="img/GitHub.png" alt="GitHub">
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <!-- bio section -->
+    <section class="bio-section">
+        <h1>About Me</h1>
+        <img src="./img/hero.png" alt="Hero drawn by Rafa">
+        <p>I'm Vivi — a freelancer, consultant, and creator with a love for building ideas that matter. Over the
+            years, I've worked across digital marketing, project management, and freelance team building, and now I'm
+            diving into web development to bring my own projects to life. I enjoy finding smart, human-centered
+            solutions and turning challenges into results.</p>
+        <a href="about.html" class="btn-primary">Learn More</a>
+    </section>
+
+    <!-- Articles -->
+    <section class="article-container">
+        <article>
+            <img class="icon" src="./img/thieve.png" alt="Thieve drawn by Rafa">
+            <h2>Project: Thieve</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit ut nisl id ornare. Mauris
+                imperdiet neque in diam tempor, ut laoreet arcu pretium.</p>
+            <a href="#" class="btn-primary">Open</a>
+        </article>
+
+        <article>
+            <img class="icon" src="./img/zombie.png" alt="Zombie drawn by Rafa">
+            <h2>Project: Zombie</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit ut nisl id ornare. Mauris
+                imperdiet neque in diam tempor, ut laoreet arcu pretium.</p>
+            <a href="#" class="btn-primary">Open</a>
+        </article>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form">
+        <h1>Get in touch</h1>
+        <form action="#" method="post">
+            <label for="your-name">Your Name</label>
+            <input type="text" id="your-name" name="your-name">
+
+            <label for="city">Your City</label>
+            <select name="city-selection" id="city">
+                <option value="Brisbane">Brisbane</option>
+                <option value="Perth">Perth</option>
+                <option value="Moon">Moon</option>
+            </select>
+
+            <label for="message">Your Message</label>
+            <textarea name="message-text" id="message" rows="10"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <!-- Scene -->
+    <div class="scene">
+        <!-- Dragon como background -->
+        <div class="dragon-bg">
+            <img src="./img/dragon.png" alt="Dragon Background">
+        </div>
+
+        <!-- Text box a la derecha -->
+        <div class="text-box">
+            <h1>Dragon's Lair</h1>
+            <p>
+                This is the place where the mighty dragon lives.
+                Be careful, only true heroes can face the challenge.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/vivianacastrillonolave/">
+                <img src="img/LinkedIn.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.instagram.com/vica_marketing/">
+                <img src="img/Instagram.png" alt="Instagram">
+            </a>
+            <a href="https://github.com/teamedau">
+                <img src="img/GitHub.png" alt="GitHub">
+            </a>
+        </div>
+    </footer>
 </body>
 
 </html>
