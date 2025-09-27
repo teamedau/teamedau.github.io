@@ -34,3 +34,12 @@
 
 ####  image_title_goes_here 
 ![Put a description of your image here](./relative_path_to_file)
+
+
+## **Description Paragraphs**
+
+### Basic Website Features Overview
+When I deployed, I initially had a nested website, because the repo name was missing the au at the end. This was a challenge to fix so Ali helped me fix it! And now it is live at the correct url.
+
+### Technical Challenges I Faced
+The nav menu was hard!
