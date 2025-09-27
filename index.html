@@ -8,13 +8,14 @@
     <title>ViCa Portfolio</title>
     <link rel="icon" type="image/png" href="./img/ViCa.png">
     <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="mobile-header">
             <img src="./img/ViCa.png" alt="ViCa Logo" class="logo">
-            <button type="button" class="menumobile-button" aria-label="Open navigation menu">
+            <button type="button" class="menumobile-button" aria-label="Open navigation menu" onClick="toggleMenu()">
                 <img src="./img/menumobile.svg" alt="Menu mobile icon">
             </button>
         </div>
@@ -22,14 +23,14 @@
         <nav class="desktop-nav" aria-label="Primary navigation">
             <ul>
                 <li><a href="about.html">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
 
         <nav class="mobile-nav display-none" aria-label="Primary navigation">
             <ul>
                 <li><a href="about.html">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -97,7 +98,7 @@
     </section>
 
     <!-- Contact Form -->
-    <section class="contact-form">
+    <section class="contact-form" ID="contact">
         <h1>Get in touch</h1>
         <form action="#" method="post">
             <label for="your-name">Your Name</label>
