@@ -1151,6 +1151,7 @@ CTA Button (LinkedIn)
     font-weight: 500;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
+}
 
 .cta-hover {
     background-color: #e2e8f0;
