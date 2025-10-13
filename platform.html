@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platform</title>
+    <link rel="icon" type="image/png" href="./img/teamedlogo.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="mobile-header">
+            <img src="./img/teamedlogo.png" alt="Teamed Logo" class="secondlogo" />
+            <button type="button" class="menumobile-button" aria-label="Open navigation menu" onClick="toggleMenu()">
+                <img src="./img/menumobile.svg" alt="Menu mobile icon" />
+            </button>
+        </div>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <nav class="mobile-nav display-none" aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main-content">
+        <section class="profile-card">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="avatar">VC</div>
+                <div class="info">
+                    <h1>Viviana Castrillon</h1>
+                    <p class="subtitle">Project Manager • since 2020 • Brisbane, AU</p>
+                    <p class="bio">
+                        Project manager and digital strategist helping small businesses turn ideas into action. When
+                        clients don't have an in-house team, I build one—bringing together skilled freelancers in
+                        marketing, communications, and design to execute strategies that deliver real results. A
+                        human-powered service where top talent works for your business.
+                    </p>
+                </div>
+                <button class="btn" onclick="window.print()">Print / Save PDF</button>
+            </div>
+
+            <!-- TABS -->
+            <div class="tabs" data-tabs>
+                <!-- PANEL: OVERVIEW -->
+                <section id="panel-overview" role="tabpanel" tabindex="0" aria-labelledby="tab-overview"
+                    class="tabpanel is-active">
+                    <div class="stats">
+                        <div class="stat-box">
+                            <h2>20</h2>
+                            <p>Completed Projects</p>
+                        </div>
+                        <div class="stat-box">
+                            <h2>85%</h2>
+                            <p>Success Rate</p>
+                        </div>
+                        <div class="stat-box">
+                            <h2>3</h2>
+                            <p>Remote Teams Managed</p>
+                        </div>
+                        <div class="stat-box">
+                            <h2>10</h2>
+                            <p>Avg. Team Size Management</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- PANEL: CHARTS -->
+                <section id="panel-charts" role="tabpanel" tabindex="0" aria-labelledby="tab-charts" class="tabpanel"
+                    data-deferred="charts">
+
+                    <div class="charts">
+                        <div class="chart-section">
+                            <h3>Industries</h3>
+                            <canvas id="industryChart" aria-label="Industries chart"></canvas>
+                        </div>
+
+                        <div class="chart-section">
+                            <h3>Human Skills</h3>
+                            <canvas id="skillsChart" aria-label="Human skills chart"></canvas>
+                        </div>
+                    </div>
+
+                </section>
+
+
+                <!-- PANEL: EXPERTISE -->
+                <section id="panel-expertise" role="tabpanel" tabindex="0" aria-labelledby="tab-expertise"
+                    class="tabpanel" data-deferred="bars">
+
+                    <div class="outer-box">
+                        <div class="inner-box">
+                            <h3 class="block-title">Areas of Expertise</h3>
+
+                            <div class="expertise-grid" role="list">
+                                <div class="expertise-row" role="listitem">
+                                    <span class="xp-label">Project Management</span>
+                                    <span class="xp-percent" aria-label="80 percent">80%</span>
+                                    <div class="bar" aria-hidden="true"><span class="fill" data-percent="80"></span>
+                                    </div>
+                                </div>
+
+                                <div class="expertise-row" role="listitem">
+                                    <span class="xp-label">Business Strategy</span>
+                                    <span class="xp-percent" aria-label="90 percent">90%</span>
+                                    <div class="bar" aria-hidden="true"><span class="fill" data-percent="90"></span>
+                                    </div>
+                                </div>
+
+                                <div class="expertise-row" role="listitem">
+                                    <span class="xp-label">Product Development</span>
+                                    <span class="xp-percent" aria-label="85 percent">85%</span>
+                                    <div class="bar" aria-hidden="true"><span class="fill" data-percent="85"></span>
+                                    </div>
+                                </div>
+
+                                <div class="expertise-row" role="listitem">
+                                    <span class="xp-label">Market Research</span>
+                                    <span class="xp-percent" aria-label="75 percent">75%</span>
+                                    <div class="bar" aria-hidden="true"><span class="fill" data-percent="75"></span>
+                                    </div>
+                                </div>
+
+                                <div class="expertise-row" role="listitem">
+                                    <span class="xp-label">Marketing &amp; Comms</span>
+                                    <span class="xp-percent" aria-label="90 percent">90%</span>
+                                    <div class="bar" aria-hidden="true"><span class="fill" data-percent="90"></span>
+                                    </div>
+                                </div>
+
+                                <div class="expertise-row" role="listitem">
+                                    <span class="xp-label">Supply Chain Mgmt</span>
+                                    <span class="xp-percent" aria-label="90 percent">90%</span>
+                                    <div class="bar" aria-hidden="true"><span class="fill" data-percent="90"></span>
+                                    </div>
+                                </div>
+
+                                <div class="expertise-row" role="listitem">
+                                    <span class="xp-label">Innovation Strategy</span>
+                                    <span class="xp-percent" aria-label="90 percent">90%</span>
+                                    <div class="bar" aria-hidden="true"><span class="fill" data-percent="90"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- PANEL: PROJECTS -->
+                <section id="panel-projects" role="tabpanel" tabindex="0" aria-labelledby="tab-projects"
+                    class="tabpanel">
+                    <div class="outer-box">
+                        <div class="inner-box">
+                            <h3 class="block-title">Selected Projects / Challenges</h3>
+
+                            <div class="projects-grid">
+                                <article class="project-tile">
+                                    <h4>Leadership, project management, and creative direction</h4>
+                                    <p>
+                                        Redesigned a cluttered website that hindered engagement. Led strategy,
+                                        sourced a remote team, and delivered a central hub to connect all platforms.
+                                    </p>
+                                    <ul>
+                                        <li>Clearer messaging</li>
+                                        <li>Improved UX</li>
+                                        <li>Increased engagement</li>
+                                    </ul>
+                                </article>
+
+                                <article class="project-tile">
+                                    <h4>Innovation &amp; creative thinking</h4>
+                                    <p>
+                                        Facilitated open collaboration and brainstorming, turning insights into
+                                        product features that kept the platform competitive.
+                                    </p>
+                                    <ul>
+                                        <li>User-driven features</li>
+                                        <li>Empowered team</li>
+                                        <li>Faster iteration</li>
+                                    </ul>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- PANEL: LANGUAGES & IMPACT -->
+                <section id="panel-langimp" role="tabpanel" tabindex="0" aria-labelledby="tab-langimp" class="tabpanel"
+                    data-deferred="bars">
+                    <div class="outer-box">
+                        <div class="inner-box">
+                            <div class="two-col">
+
+                                <!-- Languages Panel -->
+                                <div class="panel">
+                                    <h3 class="block-title">Languages</h3>
+
+                                    <div class="expertise-row">
+                                        <span>Spanish</span>
+                                        <span class="xp-percent">100%</span>
+                                        <div class="bar"><span class="fill" data-percent="100"></span></div>
+                                    </div>
+
+                                    <div class="expertise-row">
+                                        <span>English</span>
+                                        <span class="xp-percent">85%</span>
+                                        <div class="bar"><span class="fill" data-percent="85"></span></div>
+                                    </div>
+                                </div>
+
+                                <!-- Impact Indicators Panel -->
+                                <div class="panel">
+                                    <h3 class="block-title">Impact Indicators</h3>
+
+                                    <div class="metrics">
+                                        <div class="metric">
+                                            <span>Time Saved</span>
+                                            <strong>420hrs</strong>
+                                        </div>
+
+                                        <div class="metric">
+                                            <span>Revenue Generated</span>
+                                            <strong>$180,000</strong>
+                                        </div>
+
+                                        <div class="metric">
+                                            <span>Engagement Increase</span>
+                                            <strong>62%</strong>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- PANEL: TESTIMONIALS -->
+                <section id="panel-testis" role="tabpanel" tabindex="0" aria-labelledby="tab-testis" class="tabpanel">
+                    <div class="outer-box">
+                        <div class="inner-box">
+
+                            <h3 class="block-title">What Clients Say</h3>
+
+                            <div class="testimonials">
+                                <blockquote>
+                                    “We are so happy to have worked with Viviana and all her team members, they did such
+                                    an amazing job, helping us improve our corporative image. Thanks once again, we love
+                                    our new and fresh face.”
+                                    <cite>— Laura Castro, Operational Manager, Andes Management Services</cite>
+                                </blockquote>
+
+                                <blockquote>
+                                    “I had a great connection with Viviana. She helped me immensely defining the vision
+                                    of my business based on my family, cultural and ethical values. I think only Viviana
+                                    had the skills to understand my core values as she is also a mum and migrant
+                                    entrepreneur. Thank you Viviana!”
+                                    <cite>— Liliana Bravo, CEO, Casa Bonita</cite>
+                                </blockquote>
+                            </div>
+
+                            <!-- CTA BUTTON -->
+                            <div class="cta-wrapper">
+                                <a href="https://www.linkedin.com/in/vivianacastrillonolave/details/recommendations"
+                                    target="_blank" rel="noopener noreferrer" class="cta-button">
+                                    See all recommendations on LinkedIn
+                                </a>
+                            </div>
+
+                            <!-- BADGES -->
+                            <div class="badges">
+                                <span class="chip">Client Satisfaction ★★★★★</span>
+                                <span class="chip">Experience Verified</span>
+                                <span class="chip chip-right">Teamed-style Portfolio • Portable • Results-driven</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
